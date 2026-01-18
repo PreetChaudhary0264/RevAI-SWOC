@@ -25,7 +25,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-24 bg-gradient-to-b from-[#0f172a] via-[#0a1a1a] to-[#0f172a] text-[#e2e8f0]">
+    <section id="how-it-works" className="py-24 bg-gradient-to-br bg-[#113c34]  text-[#e2e8f0]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">

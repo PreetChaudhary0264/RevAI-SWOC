@@ -9,7 +9,7 @@ const testimonials = [
     company: "TechCorp",
     avatar: "SC",
     content:
-      "CodeReview AI has transformed our code review process. It catches issues we would have missed and provides valuable suggestions. Our code quality has improved significantly.",
+      "RevAI has transformed our code review process. It catches issues we would have missed and provides valuable suggestions. Our code quality has improved significantly.",
     rating: 5,
   },
   {
@@ -45,7 +45,7 @@ const testimonials = [
     company: "InnovateLabs",
     avatar: "LP",
     content:
-      "Our team velocity increased by 40% after implementing CodeReview AI. It's an essential tool for any modern development team.",
+      "Our team velocity increased by 40% after implementing RevAI. It's an essential tool for any modern development team.",
     rating: 5,
   },
   {
@@ -63,7 +63,7 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="py-24 bg-gradient-to-b from-[#0f172a] via-[#0a1a1a] to-[#0f172a] text-[#e2e8f0]"
+      className="py-24 bg-gradient-to-b bg-[#113c34]  text-[#e2e8f0]"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -71,7 +71,7 @@ const Testimonials = () => {
             Loved by Developers Worldwide
           </h2>
           <p className="text-xl text-[#94a3b8] max-w-2xl mx-auto">
-            Join thousands of developers who trust CodeReview AI
+            Join thousands of developers who trust RevAI
           </p>
         </div>
 
