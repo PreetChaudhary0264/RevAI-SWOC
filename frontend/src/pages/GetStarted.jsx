@@ -63,7 +63,7 @@ const handleSubmit = async (e) => {
     console.log("Latest PR number:", pr_number);
 
     // Step 3️⃣ — Call Flask backend
-    const response = await fetch("https://revai-backend-1.onrender.com/review", {
+    const response = await fetch("https://revai-swoc.onrender.com/review", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
     // Step 4️⃣ — Poll /status every few seconds
     const pollInterval = setInterval(async () => {
       try {
-        const statusRes = await fetch(`https://revai-backend-1.onrender.com/status/${task_id}`);
+        const statusRes = await fetch(`https://revai-swoc.onrender.com/status/${task_id}`);
         const statusData = await statusRes.json();
 
         if (statusData.status === "pending") {
