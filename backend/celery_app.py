@@ -5,6 +5,8 @@ import os
 
 load_dotenv()
 REDIS_URL = os.getenv("REDIS_URL")
+print("This is redis url loaded from env" , REDIS_URL)
+
 celery_app = Celery(
     "revai_tasks",
     broker=REDIS_URL,
