@@ -6,7 +6,7 @@ const Warmup = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const backendUrl = "https://revai-swoc.onrender.com";
+    const backendUrl = "https://revai-swoc.onrender.com/";
 
     const wakeBackend = async () => {
       try {
