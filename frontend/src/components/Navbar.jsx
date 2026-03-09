@@ -19,12 +19,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Code2 className="h-8 w-8 text-primary text-white" />
-            <span className="text-xl text-white font-bold">RevAI</span>
+            <Code2 className="h-8 w-8 text-primary text-black" />
+            <span className="text-xl text-black font-bold">RevAI</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6 text-white">
+          <div className="hidden md:flex items-center gap-6 text-black">
             <Button variant="nav" onClick={() => scrollToSection("features")}>
               Features
             </Button>
@@ -35,7 +35,7 @@ const Navbar = () => {
               Testimonials
             </Button>
             <Button variant="default" size="sm" asChild>
-              <Link className="bg-gradient-to-r from-[#34d399] to-[#facc15] text-black" to="/get-started">Get Started</Link>
+              <Link className=" bg-[#e76f51] text-white" to="/get-started">Get Started</Link>
             </Button>
           </div>
 

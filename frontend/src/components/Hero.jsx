@@ -4,88 +4,151 @@ import { ArrowRight, Github, Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0b1c17] via-[#113c34] to-[#1b5b4a] pt-20">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#34d399]/20 rounded-full blur-3xl animate-float"></div>
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      style={{ background: "#f7f3ee" }}
+    >
+      {/* Background blobs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#facc15]/20 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
+          className="absolute top-[-80px] right-[-80px] w-[480px] h-[480px] rounded-full opacity-30"
+          style={{ background: "radial-gradient(circle, #f4a261, transparent 70%)" }}
+        />
+        <div
+          className="absolute bottom-[-60px] left-[-60px] w-[400px] h-[400px] rounded-full opacity-20"
+          style={{ background: "radial-gradient(circle, #457b9d, transparent 70%)" }}
+        />
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] rounded-full opacity-10"
+          style={{ background: "radial-gradient(ellipse, #e76f51, transparent 70%)" }}
+        />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-3xl mx-auto text-center">
+
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#fef9c3]/10 backdrop-blur-sm border border-[#facc15]/40 rounded-full px-4 py-2 mb-8 animate-fade-in">
-            <Sparkles className="h-4 w-4 text-[#facc15]" />
-            <span className="text-sm text-[#fef9c3]">AI-Powered Code Review</span>
+          <div
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-8 border"
+            style={{
+              background: "#fdebd0",
+              borderColor: "#f4a261",
+            }}
+          >
+            <Sparkles className="h-3.5 w-3.5" style={{ color: "#e76f51" }} />
+            <span
+              className="text-xs font-semibold tracking-widest uppercase"
+              style={{ color: "#b5541d" }}
+            >
+              AI-Powered Code Review
+            </span>
           </div>
 
           {/* Main Heading */}
           <h1
-            className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-[#34d399] to-[#facc15]"
-            style={{ animationDelay: "0.1s" }}
+            className="text-5xl md:text-6xl font-bold mb-5 leading-tight"
+            style={{
+              color: "#1d3557",
+              fontFamily: "'Georgia', serif",
+              letterSpacing: "-0.02em",
+            }}
           >
             Automated Code Reviews
             <br />
-            Right in Your PRs
+            <span style={{ color: "#e76f51" }}>Right in Your PRs</span>
           </h1>
 
           {/* Subheading */}
           <p
-            className="text-xl md:text-2xl text-[#d1fae5] mb-10 max-w-2xl mx-auto animate-fade-in"
-            style={{ animationDelay: "0.2s" }}
+            className="text-lg mb-10 max-w-xl mx-auto leading-relaxed"
+            style={{ color: "#4a6580" }}
           >
             Connect your GitHub repository and let AI review your code, catch bugs,
             and add insightful comments directly on your pull requests.
           </p>
 
           {/* CTA Buttons */}
-          <div
-            className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in"
-            style={{ animationDelay: "0.3s" }}
-          >
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button
               variant="hero"
               size="lg"
-              className="group bg-gradient-to-r from-[#34d399] to-[#facc15] text-[#0b1c17] font-semibold hover:opacity-90 transition-all"
+              className="group font-semibold px-7 py-3 rounded-xl transition-all hover:opacity-90"
+              style={{
+                background: "#e76f51",
+                color: "#fff",
+                boxShadow: "0 4px 18px rgba(231,111,81,0.35)",
+              }}
               asChild
             >
               <Link to="/get-started">
                 Get Started Free
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
 
             <Button
               variant="outline"
               size="lg"
-              className="group border border-[#facc15]/50 text-[#facc15] hover:bg-[#facc15]/10"
+              className="group font-semibold px-7 py-3 rounded-xl transition-all"
+              style={{
+                background: "transparent",
+                border: "1.5px solid #457b9d",
+                color: "#457b9d",
+              }}
             >
-              <Github className="mr-2 h-5 w-5" />
+              <Github className="mr-2 h-4 w-4" />
               View on GitHub
             </Button>
           </div>
 
+          {/* Divider */}
+          <div
+            className="mt-16 mb-10 mx-auto"
+            style={{
+              height: "1px",
+              background: "linear-gradient(to right, transparent, #d4b896, transparent)",
+              maxWidth: "400px",
+            }}
+          />
+
           {/* Stats */}
           <div
-            className="grid grid-cols-3 gap-8 mt-20 max-w-2xl mx-auto animate-fade-in"
-            style={{ animationDelay: "0.4s" }}
+            className="grid grid-cols-3 gap-8 max-w-lg mx-auto rounded-2xl px-8 py-6"
+            style={{
+              background: "rgba(255,255,255,0.6)",
+              border: "1px solid #e8ddd2",
+              backdropFilter: "blur(8px)",
+            }}
           >
             <div>
-              <div className="text-4xl font-bold text-[#34d399] mb-2">10+</div>
-              <div className="text-sm text-[#d1fae5]">Reviews Done</div>
+              <div
+                className="text-3xl font-bold mb-1"
+                style={{ color: "#e76f51", fontFamily: "'Georgia', serif" }}
+              >
+                10+
+              </div>
+              <div className="text-sm" style={{ color: "#6b8099" }}>Reviews Done</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-[#34d399] mb-2">50+</div>
-              <div className="text-sm text-[#d1fae5]">Active Users</div>
+              <div
+                className="text-3xl font-bold mb-1"
+                style={{ color: "#e76f51", fontFamily: "'Georgia', serif" }}
+              >
+                50+
+              </div>
+              <div className="text-sm" style={{ color: "#6b8099" }}>Active Users</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-[#34d399] mb-2">80.0%</div>
-              <div className="text-sm text-[#d1fae5]">Accuracy</div>
+              <div
+                className="text-3xl font-bold mb-1"
+                style={{ color: "#e76f51", fontFamily: "'Georgia', serif" }}
+              >
+                80.0%
+              </div>
+              <div className="text-sm" style={{ color: "#6b8099" }}>Accuracy</div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -93,4 +156,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
