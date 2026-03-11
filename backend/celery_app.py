@@ -13,6 +13,9 @@ celery_app = Celery(
     backend=REDIS_URL
 )
 
+celery_app.conf.broker_pool_limit = 5
+celery_app.conf.broker_connection_retry_on_startup = True
+
 celery_app.conf.update(
     task_serializer="json",
     accept_content=["json"],

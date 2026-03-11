@@ -11,7 +11,8 @@ import os
 load_dotenv()
 
 model = ChatGoogleGenerativeAI(
-    model='gemini-2.5-flash-lite',
+    model='gemini-2.5-flash',
+    max_retries=0,
 )
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
