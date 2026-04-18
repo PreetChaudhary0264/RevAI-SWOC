@@ -86,19 +86,25 @@ const Hero = () => {
               </Link>
             </Button>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="group font-semibold px-7 py-3 rounded-xl transition-all"
-              style={{
-                background: "transparent",
-                border: "1.5px solid #457b9d",
-                color: "#457b9d",
-              }}
-            >
-              <Github className="mr-2 h-4 w-4" />
-              View on GitHub
-            </Button>
+              <a 
+                 href="https://github.com/PreetChaudhary0264/RevAI-A" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+               >
+                 <Button
+                   variant="outline"
+                   size="lg"
+                   className="group font-semibold px-7 py-3 rounded-xl transition-all"
+                   style={{
+                     background: "transparent",
+                     border: "1.5px solid #457b9d",
+                     color: "#457b9d",
+                   }}
+                 >
+                   <Github className="mr-2 h-4 w-4" />
+                   View on GitHub
+                 </Button>
+               </a>
           </div>
 
           {/* Divider */}

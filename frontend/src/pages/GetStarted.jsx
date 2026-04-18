@@ -61,7 +61,7 @@ const GetStarted = () => {
       const pr_number = prData[0].number;
       console.log("Latest PR number:", pr_number);
 
-      const response = await fetch("https://revai-swoc.onrender.com/review", {
+      const response = await fetch("http://127.0.0.1:5000/review", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -83,7 +83,7 @@ const GetStarted = () => {
 
       const pollInterval = setInterval(async () => {
         try {
-          const statusRes = await fetch(`https://revai-swoc.onrender.com/status/${task_id}`);
+          const statusRes = await fetch(`http://127.0.0.1:5000/status/${task_id}`);
           const statusData = await statusRes.json();
 
           if (statusData.status === "pending") {
